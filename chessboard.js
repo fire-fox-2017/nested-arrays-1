@@ -5,7 +5,6 @@ const makeChessboard = () => {
 
   // ... write your code here
   let pieces = ["Pawn", "Rook", "Knight", "Bishop", "Queen", "King", "Bishop", "Knight", "Rook"];
-  let pawn = ["Pawn"];
   let color = ["Black", "White"];
 
   for (let i = 0 ; i < 8 ; i++) {
