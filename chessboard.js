@@ -1,39 +1,39 @@
 'use strict'
 
-let chessboard = []
 const makeChessboard = () => {
-
+  let chessboard = []
     for (let x = 0; x < 8; x++) {
-        chessboard.push([])
+        let arr_n = []
         for (let y = 0; y < 8; y++) {
             if (x == 1) {
-              chessboard[x].push('Pion wit')
+              arr_n.push('Pion wit')
             } else if (x == 6) {
-              chessboard[x].push('Pion hit')
+              arr_n.push('Pion hit')
             } else if (x == 0 && y == 0 || x == 0 && y == 7 ) {
-              chessboard[x].push('Ben wit')
+              arr_n.push('Ben wit')
             } else if (x == 7 && y == 0 || x == 7 && y == 7) {
-              chessboard[x].push('Ben hit')
+              arr_n.push('Ben hit')
             } else if (x == 0 && y == 1 || x == 0 && y == 6) {
-              chessboard[x].push('Kuda wit')
+              arr_n.push('Kuda wit')
             } else if (x == 7 && y == 1 || x == 7 && y == 6) {
-              chessboard[x].push('Kuda hit')
+              arr_n.push('Kuda hit')
             } else if (x == 0 && y == 2 || x == 0 && y == 5) {
-              chessboard[x].push('Pelun wit')
+              arr_n.push('Pelun wit')
             } else if (x == 7 && y == 2 || x == 7 && y == 5) {
-              chessboard[x].push('Pelun hit')
+              arr_n.push('Pelun hit')
             } else if (x == 0 && y == 3) {
-              chessboard[x].push('Men wit')
+              arr_n.push('Men wit')
             } else if (x == 7 && y == 4) {
-              chessboard[x].push('Men hit')
+              arr_n.push('Men hit')
             } else if (x == 0 && y == 4) {
-              chessboard[x].push('King wit')
+              arr_n.push('King wit')
             } else if (x == 7 && y == 3) {
-              chessboard[x].push('King hit')
+              arr_n.push('King hit')
             }else {
-              chessboard[x].push('Kosong')
+              arr_n.push('Kosong')
             }
         }
+        chessboard.push(arr_n)
     }
 // console.log(chessboard)
     // ... write your code here
@@ -43,15 +43,13 @@ const makeChessboard = () => {
 const printBoard = x => {
     // ... write your code here
     let chess = makeChessboard()
-    let baris2 = []
     for(let i=0; i<8; i++){
-      baris2.push(chess[i].join('|'))
+      console.log(chess[i].join('|'))
     }
-    baris2 = baris2.join('\n')
-    console.log(baris2)
 }
-
-printBoard(makeChessboard())
+// makeChessboard()
+printBoard()
+// printBoard(makeChessboard())
 
 module.exports = {
     makeChessboard,
