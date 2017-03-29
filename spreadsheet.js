@@ -25,4 +25,4 @@ dataTable.addData(data4);
 
 dataTable.getData();
 
-module.exports = Spreadsheet
+module.exports = Spreadsheet;
