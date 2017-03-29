@@ -1,29 +1,32 @@
 'use strict'
 
 const makeChessboard = () => {
-  let chessboard = []
-
+  let chessboard = [];
   // ... write your code here
-    let chessboard = [];
-  // ... write your code here
-  var chessColor = ['black', 'white'];
-  var chessKingdom = ['rook', 'knight', 'bishop', 'queen', 'king', 'bishop', 'knight', 'rook'];
-  var chessPion = ['pion', 'pion', 'pion', 'pion', 'pion', 'pion', 'pion', 'pion'];
+  var color = "black white";
+  var bidak = "rook knight bishop queen king bishop knight rook";
+  var chessColor = color.split(' ');
+  var chessKingdom = bidak.split(' ');
+  var chessPion = [];
+  var i, j;
+  for (i=0; i<chessKingdom.length; i++){
+    chessPion.push("pion");
+  }
   var chessKingdomWhite = [];
   var chessKingdomBlack = [];
   var pionWhite = [];
   var pionBlack = [];
-  for (var i=0; i<chessKingdom.length; i++){
-    chessKingdomWhite.push(chessColor[1] + " " + chessKingdom[i]);
-    chessKingdomBlack.push(chessColor[0] + " " + chessKingdom[i]);
-    pionWhite.push(chessColor[1] + " " + chessPion[i]);
-    pionBlack.push(chessColor[0] + " " + chessPion[i]);
-  }
+    for(j=0; j<chessKingdom.length; j++){
+      chessKingdomWhite.push(chessColor[1] + " " + chessKingdom[j]);
+      chessKingdomBlack.push(chessColor[0] + " " + chessKingdom[j]);
+      pionWhite.push(chessColor[1] + " " + chessPion[j]);
+      pionBlack.push(chessColor[0] + " " + chessPion[j]);
+    }
   chessboard.push(chessKingdomBlack);
   chessboard.push(pionBlack);
   chessboard.push(pionWhite);
   chessboard.push(chessKingdomWhite);
-  
+
   chessboard.splice(2, 0, [], [], [], []);
   return chessboard;
 }
@@ -33,7 +36,7 @@ const printBoard = x => {
   console.log(x);
 }
 
-printBoard(makeChessboard())
+printBoard(makeChessboard());
 
 module.exports = {
   makeChessboard,
