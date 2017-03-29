@@ -9,18 +9,18 @@ const makeChessboard = () => {
     chessboard.push([]);
   }
   for (var b=0; b<8; b++){
-    chessboard[1].push(col[0]+" "+paw);
-    chessboard[2].push("");
-    chessboard[3].push("");
-    chessboard[4].push("");
-    chessboard[5].push("");
-    chessboard[6].push(col[1]+" "+paw);
+    chessboard[1].push( "  " +col[0]+" "+paw+" ");
+    chessboard[2].push("             ");
+    chessboard[3].push("             ");
+    chessboard[4].push("             ");
+    chessboard[5].push("             ");
+    chessboard[6].push("  "+col[1]+" "+paw+" ");
   }
   for (var i = 0; i<pie.length; i++){
-    chessboard[0].push(col[0]+" "+pie[i]);
-    chessboard[7].push(col[1]+" "+pie[i]);
+    chessboard[0].push(" "+col[0]+" "+pie[i]+" ");
+    chessboard[7].push(" "+col[1]+" "+pie[i]+" ");
   }
-  return chessboard
+  return chessboard.join("  |      ");
 }
 
 const printBoard = x => {
