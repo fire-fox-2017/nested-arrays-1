@@ -30,7 +30,6 @@ sheet.addData(data5);
 
 let table = sheet.getData();
 
-console.log(table[3][2] == "Shooting Guard");
-console.log(JSON.stringify(table[1][3]) == JSON.stringify([14, 32, 7, 0, 23]));
+console.log(table);
 
 module.exports = Spreadsheet
