@@ -36,6 +36,8 @@ const makeChessboard = () => {
         chessboard[i].push(colors[1] + " " + backRowSet[j]);
       } else if (i === row-2) {
         chessboard[i].push(colors[1] + " " + frontRowSet[j]);
+      } else {
+        chessboard[i].push("empty");
       }
     }
   }
@@ -45,7 +47,12 @@ const makeChessboard = () => {
 
 const printBoard = x => {
   // ... write your code here
-  console.log(x);
+  for (let i = 0; i < x.length; i++) {
+    for (let j =0; j < x[i].length; j++) {
+      console.log(x[i][j]);
+    }
+
+  }
 }
 
 printBoard(makeChessboard())
