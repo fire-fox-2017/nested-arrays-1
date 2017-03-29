@@ -2,7 +2,7 @@
 
 function susun(indexRow){
   let pasukan = ['pion','benteng','kuda','mentri','raja','permaisuri'];
-  let w='';
+  let w = '';
   let susunan = [];
 
 
@@ -12,13 +12,13 @@ function susun(indexRow){
     }else{
       w=' putih';
     }
-    for(let i=1;i<pasukan.length;i++){
+    for(let i = 1;i<pasukan.length;i++){
       susunan.push(pasukan[i]+w);
     }
-    for(let i=pasukan.length-3;i>=1;i--){
+    for(let i = pasukan.length-3;i>=1;i--){
       susunan.push(pasukan[i]+w);
     }
-  } else if(indexRow==1||indexRow==6){
+  } else if(indexRow == 1||indexRow == 6){
     if(indexRow==1){
       w=' hitam';
     }else{
@@ -31,8 +31,6 @@ function susun(indexRow){
     for(let i=0;i<8;i++){
       susunan.push(" ");
     }
-
-
   }
 
   return susunan;
