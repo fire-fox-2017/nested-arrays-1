@@ -3,17 +3,17 @@
 const makeChessboard = () => {
   let chessboard = [];
   // ... write your code here
-  var bidak1 = ['Benteng', 'Kuda', 'Gajah', 'Ratu', 'Raja', 'Gajah', 'Kuda', 'Benteng'];
-  var bidak2 = 'Pion'
-  var warna = ['Hitam','Putih'];
+  var bidak1 = ['B', 'K', 'G', 'r', 'R', 'G', 'K', 'B'];
+  var bidak2 = 'i'
+  var warna = ['H','P'];
   var array=[];
 
   for(var i=0;i<bidak1.length;i++){
-    array.push(bidak1[i]+' '+warna[0]);
+    array.push(bidak1[i] + warna[0]);
   }
 
   for(var i=0;i<8;i++){
-    array.push(bidak2+' '+warna[0]);
+    array.push(bidak2 + warna[0]);
   }
 
   //dibawah ini klo mau jelaskan keterangan warna kotak yang kosong
@@ -38,29 +38,30 @@ const makeChessboard = () => {
   */
 
   for(var i=0;i<32;i++){
-    array.push('kosong');
+    array.push('  ');
   }
 
   for(var i=0;i<8;i++){
-    array.push(bidak2+' '+warna[1]);
+    array.push(bidak2 + warna[1]);
   }
 
   for(var i=0;i<bidak1.length;i++){
-    array.push(bidak1[i]+' '+warna[1]);
+    array.push(bidak1[i] + warna[1]);
   }
 
   for(var j=0;j<array.length;j+=8){
-    chessboard.push(array.slice(j,j+8));
+    chessboard.push(array.slice(j,j+8).join(' | '));
   }
   return chessboard;
 }
 
 const printBoard = x => {
   // ... write your code here
-  var temp=[];
-  for(var k=0;k<8;k++){
-    console.log(x.slice(k,k+1).join('  '));
-  }
+  // var temp=[];
+  // for(var k=0;k<8;k++){
+  //   console.log(x.slice(k,k+1).join('-'));
+  // }
+  console.log (makeChessboard());
 }
 
 printBoard(makeChessboard())

@@ -13,7 +13,7 @@ class Spreadsheet {
     console.log(this._spreadsheet);
   }
 }
-var execute  = new Spreadsheet()
+var execute  = new Spreadsheet();
 
 execute.addData(['12', 'Joe Schmo', 'Center',[14,32,7,0,23]]);
 execute.addData(['9','Ken Buckets','Point Guard', [19,0,11,22,0]]);
