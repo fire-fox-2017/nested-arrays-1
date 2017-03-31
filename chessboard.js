@@ -27,6 +27,7 @@ const makeChessboard = () => {
   chessboard.push(pionWhite);
   chessboard.push(chessKingdomWhite);
 
+
   var kosong = [];
   for (var k=0; k<chessKingdom.length; k++){
     kosong.push('kosong');
