@@ -21,7 +21,7 @@ const printBoard = x => {
   return makeChessboard
 }
 
-printBoard(makeChessboard())
+console.log(makeChessboard())
 
 module.exports = {
   makeChessboard,
