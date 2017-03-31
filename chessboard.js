@@ -6,7 +6,6 @@ const makeChessboard = () => {
     let data = 8;
     for (let i=0; i<data; i++){
       chessboard.push([])
-
         for(let j=0; j<data; j++) {
             if(i == 0 && j == 0) {
               chessboard[i].push("Benteng Hitam");
