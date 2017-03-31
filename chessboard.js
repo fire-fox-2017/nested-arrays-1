@@ -14,14 +14,8 @@ const makeChessboard = () => {
         chessboard[i].push(chess[j]+" "+color[0]);
       }else if(i===1){
         chessboard[i].push(" "+chess[8]+" "+color[0]+" ");
-      }else if(i===2){
-        chessboard[i].push("____________");
-      }else if(i===3){
-        chessboard[i].push("____________");
-      }else if(i===4){
-        chessboard[i].push("____________");
-      }else if(i===5){
-        chessboard[i].push("____________");
+      }else if(i>1 && i<6){
+       chessboard[i].push("____________");
       }else if(i===6){
         chessboard[i].push(" "+chess[8]+" "+color[1]+" ");
       }else if(i===7){
