@@ -4,8 +4,7 @@ const makeChessboard = () => {
   let chessboard = []
 
   // ... write your code here
-  let chess = ["Benteng","Kuda","Peluncur","Menteri","Raja","Peluncur","Kuda","Benteng"];
-  let pawn = ["Pion","Pion","Pion","Pion","Pion","Pion","Pion","Pion"];
+  let chess = ["Benteng","Kuda","Peluncur","Menteri","Raja","Peluncur","Kuda","Benteng","Pion"];
 
   for(var i=0;i<8;i++){
     chessboard.push([]);
@@ -13,16 +12,16 @@ const makeChessboard = () => {
       if(i===0){
         chessboard[i].push(chess[j]+" Hitam");
       }else if(i===1){
-        chessboard[i].push(pawn[j]+" Hitam");
+        chessboard[i].push(chess[8]+" Hitam");
       }else if(i===6){
-        chessboard[i].push(pawn[j]+" Putih");
+        chessboard[i].push(chess[8]+" Putih");
       }else if(i===7){
         chessboard[i].push(chess[j]+" Putih");
       }
     }
   }
 
-  return chessboard
+  return chessboard;
 }
 
 const printBoard = x => {
