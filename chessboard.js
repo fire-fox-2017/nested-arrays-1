@@ -20,16 +20,23 @@ const makeChessboard = () => {
       }else if(i === 6){
         chessboard[i].push('Bidak'+warna[1]);
       }else{
-        chessboard[i].push('');
+        chessboard[i].push('___________');
       }
     }
   }
-  return chessboard
+  return chessboard;
 }
 
 const printBoard = x => {
   // ... write your code here
-  console.log(x);
+  var tampil = '';
+   var baris = [];
+   for (var y=0; y<x.length; y++){
+       baris.push(x[y].join(' | '));
+   }
+   for (y=0; y<x.length; y++){
+     console.log('|'+y+' : '+baris[y]);
+ }
 }
 
 printBoard(makeChessboard())
