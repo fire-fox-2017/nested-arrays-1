@@ -10,7 +10,7 @@ const makeChessboard = () => {
   var petinggi = ["Benteng","Kuda","Gajah","Raja","Ratu","Gajah","Kuda","Benteng"];
   var pion = ["Pion"];
   var warna = ["Hitam","Putih"];
-  var kosong = ["Kosong"];
+  var kosong = [""];
   var baris_0 = [];
   var baris_1 = [];
   var baris_2 = [];
@@ -73,19 +73,23 @@ const makeChessboard = () => {
 
   /*
   Uncomment bila tidak menemukan prinsip pengulangan yang baik
-  chessboard = [["Benteng Hitam","Kuda Hitam","Gajah Hitam","Raja Hitam","Ratu Hitam","Gajah Hitam","Kuda Hitam","Benteng Hitam"],
-                ["Pion Hitam","Pion Hitam","Pion Hitam","Pion Hitam","Pion Hitam","Pion Hitam","Pion Hitam","Pion Hitam"],
-                ["","","","","","","","","",""]];
-                ["","","","","","","","","",""]];
-                ["","","","","","","","","",""]];
-                ["","","","","","","","","",""]];
-                ["Pion Putih","Pion Putih","Pion Putih","Pion Putih","Pion Putih","Pion Putih","Pion Putih","Pion Putih"],
-                ["Benteng Putih","Kuda Putih","Gajah Putih","Raja Putih","Ratu Putih","Gajah Putih","Kuda Putih","Benteng Putih"]]
+  Baris1 =  ["Benteng Hitam","Kuda Hitam","Gajah Hitam","Raja Hitam","Ratu Hitam","Gajah Hitam","Kuda Hitam","Benteng Hitam"];
+  Baris2 =  ["Pion Hitam","Pion Hitam","Pion Hitam","Pion Hitam","Pion Hitam","Pion Hitam","Pion Hitam","Pion Hitam"];
+  Baris3 =  ["","","","","","","","","",""];
+  Baris4 =  ["","","","","","","","","",""];
+  Baris5 =  ["","","","","","","","","",""];
+  Baris6 =  ["","","","","","","","","",""];
+  Baris7 =  ["Pion Putih","Pion Putih","Pion Putih","Pion Putih","Pion Putih","Pion Putih","Pion Putih","Pion Putih"];
+  Baris8 =  ["Benteng Putih","Kuda Putih","Gajah Putih","Raja Putih","Ratu Putih","Gajah Putih","Kuda Putih","Benteng Putih"];
+  let chessboard = [];
+  return chessboar.unshift(Baris1).unshift(Baris2).unshift(Baris3).unshift(Baris4).unshift(Baris5).unshift(Baris6).unshift(Baris7).unshift(Baris8);
   */
   return chessboard
 }
 const printBoard = x => {
-  console.log(x)
+  for (let i = 0 ; i < x.length; i++){
+    console.log(x[i].join(" "))
+  }
 }
 
 printBoard(makeChessboard())
