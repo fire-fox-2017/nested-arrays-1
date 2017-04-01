@@ -1,21 +1,31 @@
 'use strict'
+'use strict'
 
 const makeChessboard = () => {
-  let chessboard = [];
-  var caturhitam = ["Benteng Hitam", "Kuda Hitam", "Luncur Hitam", "Ster Hitam", "Raja Hitam","Luncur Hitam","Kuda Hitam","Benteng Hitam"];
-  var pionputih = ["Pion Putih","Pion Putih","Pion Putih","Pion Putih","Pion Putih","Pion Putih","Pion Putih","Pion Putih"];
-  var pionhitam = ["Pion Hitam","Pion Hitam","Pion Hitam","Pion Hitam","Pion Hitam","Pion Hitam","Pion Hitam","Pion Hitam"];
-  var caturputih = ["Benteng Putih", "Kuda Putih", "Luncur Putih", "Ster Putih", "Raja Putih","Luncur Putih","Kuda Putih","Benteng Putih"];
-  var empty = [" "," "," "," "," "," "," "," "];
-  chessboard.push(caturputih,pionputih,empty,empty,pionhitam,caturhitam);
-
-console.log(chessboard);
+  var chessboard = [];
+  var empty = " ";
+  var catur = ["Benteng", "Kuda", "Luncur", "Raja", "Ster", "Luncur", "Kuda", "Benteng"];
+  var warna = ["Hitam", "Putih"];
+  var pion = "Pion";
+  for (var a = 0; a<8; a++){
+    chessboard.push([]);
+  }
+  for (var i=0; i<8; i++){
+    chessboard[0].push(" "+catur[i]+" "+warna[1]+" ");
+    chessboard[1].push( "  " + pion + " " + warna[1] +" ");
+    chessboard[2].push(empty);
+    chessboard[3].push(empty);
+    chessboard[4].push(empty);
+    chessboard[5].push(empty);
+    chessboard[6].push("  "+ pion + " " +warna[1]+" ");
+    chessboard[7].push(" "+catur[i]+" "+warna[1]+" ");
+  }
+  return chessboard;
 }
-makeChessboard();
 
 
 const printBoard = x => {
-  // ... write your code here
+console.log(x);
 }
 
 printBoard(makeChessboard())
