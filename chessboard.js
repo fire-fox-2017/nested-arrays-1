@@ -38,7 +38,6 @@ const makeChessboard = () => {
         break
       default:
         console.log('default');
-        
     }
   }
 
